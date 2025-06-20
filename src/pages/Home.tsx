@@ -146,29 +146,39 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Skills Preview Section */}
+      {/* Skills & Interests Section */}
       <section className="py-20 px-8">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
-            What I'm Learning
+            Skills & Interests
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: "Frontend Development",
-                description: "React, TypeScript, Tailwind CSS",
-                icon: "💻"
+                title: "React & TypeScript",
+                description: "Building dynamic user interfaces with modern JavaScript",
+                icon: "⚛️"
               },
               {
-                title: "Modern CSS", 
-                description: "Flexbox, Grid, Responsive Design",
+                title: "CSS3 & CSS-in-JS", 
+                description: "Styling applications with modern CSS techniques",
                 icon: "🎨"
               },
               {
-                title: "Development Tools",
-                description: "Git, VS Code, Browser DevTools",
-                icon: "⚙️"
+                title: "Responsive Web Design",
+                description: "Creating layouts that work on all devices",
+                icon: "📱"
+              },
+              {
+                title: "UI/UX Principles",
+                description: "Designing intuitive and user-friendly interfaces",
+                icon: "🔍"
+              },
+              {
+                title: "Accessibility Best Practices",
+                description: "Building inclusive web experiences for everyone",
+                icon: "♿"
               }
             ].map((skill, index) => (
               <div 
