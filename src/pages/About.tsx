@@ -4,7 +4,14 @@ const About = () => {
   return (
     <div className="min-h-screen bg-blue-100 pt-20">
       <div className="container mx-auto px-8 py-16">
-        <h1 className="text-4xl font-bold text-center mb-8 text-gray-800">About Me</h1>
+        <div className="text-center mb-8">
+          <img 
+            src="/lovable-uploads/fe7a7467-2721-41c8-a02b-70f23af37adc.png" 
+            alt="Nyalim Kuoth"
+            className="w-32 h-32 rounded-full mx-auto mb-6 object-cover shadow-lg"
+          />
+          <h1 className="text-4xl font-bold text-gray-800">About Me</h1>
+        </div>
         <div className="max-w-4xl mx-auto">
           <p className="text-lg text-gray-600 mb-6">
             Hi! I'm Nyalim Kuoth, a passionate beginner front-end developer eager to dive into the world of web development.
