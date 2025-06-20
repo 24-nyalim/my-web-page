@@ -73,7 +73,7 @@ const Home = () => {
               lineHeight: '1.2'
             }}
           >
-            Hi, I'm Alex Johnson
+            Hello, I'm Nyalim Kuoth
           </h1>
           
           <p 
@@ -84,8 +84,7 @@ const Home = () => {
               lineHeight: '1.8'
             }}
           >
-            Full-Stack Developer & UI/UX Designer passionate about creating 
-            beautiful, functional digital experiences that make a difference.
+            I'm a passionate beginner front-end developer with an interest in gaining experience building beautiful, responsive web applications using React, TypeScript, and modern CSS frameworks.
           </p>
           
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
@@ -103,12 +102,14 @@ const Home = () => {
                 boxShadow: '0 4px 15px rgba(37, 99, 235, 0.3)'
               }}
               onMouseEnter={(e) => {
-                e.target.style.transform = 'translateY(-2px)';
-                e.target.style.boxShadow = '0 8px 25px rgba(37, 99, 235, 0.4)';
+                const target = e.target as HTMLElement;
+                target.style.transform = 'translateY(-2px)';
+                target.style.boxShadow = '0 8px 25px rgba(37, 99, 235, 0.4)';
               }}
               onMouseLeave={(e) => {
-                e.target.style.transform = 'translateY(0)';
-                e.target.style.boxShadow = '0 4px 15px rgba(37, 99, 235, 0.3)';
+                const target = e.target as HTMLElement;
+                target.style.transform = 'translateY(0)';
+                target.style.boxShadow = '0 4px 15px rgba(37, 99, 235, 0.3)';
               }}
             >
               View My Work
@@ -127,14 +128,16 @@ const Home = () => {
                 transition: 'all 0.3s ease'
               }}
               onMouseEnter={(e) => {
-                e.target.style.background = '#2563eb';
-                e.target.style.color = 'white';
-                e.target.style.transform = 'translateY(-2px)';
+                const target = e.target as HTMLElement;
+                target.style.background = '#2563eb';
+                target.style.color = 'white';
+                target.style.transform = 'translateY(-2px)';
               }}
               onMouseLeave={(e) => {
-                e.target.style.background = 'transparent';
-                e.target.style.color = '#2563eb';
-                e.target.style.transform = 'translateY(0)';
+                const target = e.target as HTMLElement;
+                target.style.background = 'transparent';
+                target.style.color = '#2563eb';
+                target.style.transform = 'translateY(0)';
               }}
             >
               Get In Touch
@@ -147,7 +150,7 @@ const Home = () => {
       <section className="py-20 px-8">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
-            What I Do Best
+            What I'm Learning
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8">
@@ -158,14 +161,14 @@ const Home = () => {
                 icon: "💻"
               },
               {
-                title: "Backend Development", 
-                description: "Node.js, Python, Database Design",
-                icon: "⚙️"
+                title: "Modern CSS", 
+                description: "Flexbox, Grid, Responsive Design",
+                icon: "🎨"
               },
               {
-                title: "UI/UX Design",
-                description: "Figma, User Research, Prototyping",
-                icon: "🎨"
+                title: "Development Tools",
+                description: "Git, VS Code, Browser DevTools",
+                icon: "⚙️"
               }
             ].map((skill, index) => (
               <div 
@@ -184,12 +187,14 @@ const Home = () => {
         </div>
       </section>
 
-      <style jsx>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0px) rotate(0deg); }
-          50% { transform: translateY(-20px) rotate(10deg); }
-        }
-      `}</style>
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+          }
+        `
+      }} />
     </div>
   );
 };

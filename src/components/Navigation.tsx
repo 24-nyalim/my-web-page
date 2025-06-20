@@ -41,7 +41,7 @@ const Navigation = () => {
             WebkitTextFillColor: 'transparent'
           }}
         >
-          Alex Portfolio
+          Nyalim Portfolio
         </Link>
         
         <div style={{ display: 'flex', gap: '2rem' }}>
@@ -58,12 +58,14 @@ const Navigation = () => {
                 padding: '0.5rem 0'
               }}
               onMouseEnter={(e) => {
-                e.target.style.color = '#2563eb';
-                e.target.style.transform = 'translateY(-2px)';
+                const target = e.target as HTMLElement;
+                target.style.color = '#2563eb';
+                target.style.transform = 'translateY(-2px)';
               }}
               onMouseLeave={(e) => {
-                e.target.style.color = location.pathname === item.path ? '#2563eb' : '#64748b';
-                e.target.style.transform = 'translateY(0)';
+                const target = e.target as HTMLElement;
+                target.style.color = location.pathname === item.path ? '#2563eb' : '#64748b';
+                target.style.transform = 'translateY(0)';
               }}
             >
               {item.label}
